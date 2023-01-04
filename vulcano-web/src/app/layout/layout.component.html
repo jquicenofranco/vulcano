@@ -1,0 +1,21 @@
+<div class='demo-app'>
+
+    <div class='demo-app-sidebar' *ngIf="mostrarMenu">
+        <div class='demo-app-sidebar-section'>
+            <div [ngStyle]="setMyStyle()" [style]="{'height': '200px','width': '250px'}">
+            </div>
+            <h2>Menú</h2>
+            <ul>
+                <li><a routerLink="/cuento">Cuento</a></li>
+                <li><a routerLink="/calendario">Calendario</a></li>
+                <li><a routerLink="/reporte">Reportes</a></li>
+                <li><a class="nav-link" href="#" (click)="cerrarSesion()">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class='demo-app-main'>
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
